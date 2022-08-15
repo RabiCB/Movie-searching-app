@@ -1,0 +1,180 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Visual{
+    height:600px;
+    background: url(hdg.jpg) ;
+    width:100%;
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.Visual-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 5%;
+    padding:20px 0 0;
+    text-size-adjust: 100%;
+    -webkit-font-smoothing:antialiased;
+
+  
+   
+}
+.signup-btn{
+    background-color:#cd7700;
+    font-size:0.9rem;
+    font-weight: 400;
+    padding: 0.25rem 0.5rem;
+    color:#fff;
+    text-decoration: none;
+    -webkit-text-size-adjust: 100%;
+    border-radius: 3px;
+    
+}
+.visual-content{
+    text-align: center;
+    margin-top:8rem;
+    width:100%;
+    -webkit-text-size-adjust: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.visual-content h1{
+    font-size: 1.9rem;
+    max-width: 500px;
+    margin: 0 auto;
+    font-weight: 700;    
+    line-height: 2rem;
+    color:rgb(255, 255, 255);
+    text-align: center;
+    
+}
+.visual-content P{
+font-size: 1.1rem;
+margin:1rem auto;
+max-width: 640px;
+color:#fff;
+font-weight: 400;
+padding:0 5%;
+
+}
+.input-field{
+    width:345px;
+    
+    height: 48px;
+    padding:10px 10px 0;
+    font-size: 1rem;
+    border:solid 1px #8c8c8c;
+    border-radius: 4px;
+    margin: auto;
+    appearance: none;
+    cursor: pointer;
+    display: block;
+    
+}
+ input:focus{
+    outline: none;
+    border: 1px solid aqua;
+    
+}
+
+.btn-4{
+   font-size: 1rem;
+   text-align: center;
+   color:#fff;
+   font-weight:400;
+   user-select: none;
+   letter-spacing: 1px;
+   cursor: pointer;
+   flex-basis: auto;
+   flex-shrink: 1;
+   font-stretch: 100%;
+   align-items: center;
+   text-size-adjust: 100%;
+   background-color: #cd7700;
+   margin-top: 1rem;
+   box-shadow: rgba(0,0,0,.45) ;
+   padding:5px 12px;
+   border: none;
+   border-radius: 4px;
+   margin-bottom: 1rem;
+
+}
+.btn-2:hover{
+    background-color:#976012
+}
+@media screen and (max-width:410px){
+.Visual{
+    padding:0 8%;
+    height:510px;
+}
+.input-field{
+    width:235px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.btn-2{
+    margin-bottom: 1.5rem;
+}
+.visual-content p{
+    font-size: 0.9rem;
+}
+
+.visual-content h1{
+    font-size: 1.4rem;
+}
+
+} 
+@media screen and (max-width:350px){
+    .signup-btn{
+        padding:0.20rem , 0.38rem;
+        font-size: 0.7rem;
+    }
+
+    .visual-top h1{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width:300px){
+.input-field{
+    width:180px;
+}
+.visual-content p{
+    font-size: 0.7rem;
+}
+.visual-content h1{
+    font-size: 1.2rem;
+}
+}
+@media screen and (max-width:230px){
+    .visual-top{
+        padding:0 2%;
+    }
+    .visual-top h1{
+        font-size: 1rem;
+    }
+    .visual-content p{
+        font-size: 0.5rem;
+    }
+    .visual-content h1{
+        font-size: 0.9rem;
+    }
+    .input-field{
+        width:135px;
+    }
+    .signup-btn{
+        padding:0.15rem 0.3rem;
+        font-size: 0.5rem;
+
+    }
+    .visual-top h1{
+        font-size: 1rem;
+
+    }
+}

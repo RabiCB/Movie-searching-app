@@ -1,0 +1,101 @@
+.Login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: aliceblue;
+    height: 100vh;
+    width:100%;
+}
+.login-logo{
+    margin:3% 0;
+    
+}
+.login-page{
+    border:1px solid rgb(202, 199, 199);
+    width:22rem;
+    height: 24rem;
+    padding-top: 1rem;
+
+
+}
+
+.sign>h3{
+    padding-left: 1rem;
+    font-weight: 500;
+    font-size: 1rem;
+    padding-bottom: 0.6rem;
+}
+
+.login-input{
+    margin-top: 1rem;
+    padding-left: 1rem;
+    
+
+}
+
+.login-input >p{
+    font-weight: 550;
+    font-size: 0.8rem;
+    margin-bottom: 0.1rem;
+    
+}
+.login-input>input{
+    padding:12px 12px ;
+    width:18rem;
+    margin-bottom: 1rem;
+    border-width: 0.1rem;
+    outline: none;
+    border-right-color: rgb(194, 191, 191);
+    border-left-color:  rgb(194, 191, 191);
+    border-bottom-color:  rgb(194, 191, 191);
+    border-top-color:  rgb(194, 191, 191);
+    
+}
+.signIn-btn{
+   
+    display: flex;
+    justify-content: center;
+    margin-top: 0.7rem;
+    
+   
+}
+.btn-2{
+    width: 18rem;
+    padding: 12px 12px;
+    width:90%;
+    background-color: rgb(238, 142, 17);
+    outline: none;
+    border: none;
+
+}
+.btn-2:hover{
+    background-color: rgb(239, 170, 114);
+}
+.create-account{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    
+}
+.btn-3{
+    width: 18rem;
+    padding: 12px 12px;
+    width:90%;
+    background-color:lightgray;
+    outline: none;
+    border: none;
+    border-radius: 1px ;
+   
+    
+
+}
+input:focus{
+    border-color: rgb(51, 214, 236);
+}
+
+.Error{
+    font-size: 0.6rem;
+    color:red;
+    
+}
