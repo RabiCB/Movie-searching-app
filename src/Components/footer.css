@@ -28,6 +28,10 @@
     color:#cd7700;
 
 }
+.footer li:hover{
+    color:#cd7700;
+
+}
 
 @media screen and (max-width:350px) {
     .footer{

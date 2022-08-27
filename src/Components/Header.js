@@ -2,27 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import Watch from "./Watch";
-import{actionTypes} from '../reducer'
-import { auth,provider } from "../firebase";
-import { useStateValue } from "../Stateprovider";
-
-
-
-
 const Header = () => {
-  const [{user},dispatch]=useStateValue();
-  const signIn=()=>{
-    auth.signInWithPopup(provider)
-    .then((result)=>{
-      dispatch({
-        type:actionTypes.SET_USER,
-        user:result.user,
-      })
-      
-
-    }).catch((err)=>alert(err.message)
-    )
-  };
+  
   return (
     <>
     <div className="Visual">
@@ -33,16 +14,13 @@ const Header = () => {
             color: "#cd7700",
             cursor: "pointer",
             textdecoration: "none",
+            fontWeight:"700",
+            fontSize:"1.6rem"
           }}>
           MTG
         </h1>
         </Link>
-
-
-         
-
-  
-        <Link to="/signup" className="signup-btn">
+        <Link to="/signin" className="signup-btn">
           sign up
         </Link>
       </div>
@@ -60,9 +38,8 @@ const Header = () => {
           className="input-field"
           placeholder="email address"
         ></input>
-         
-        <Link to="/mtgshow">
-            <button className="btn-4" onClick={signIn}>Get Started </button>
+        <Link to="/login">
+            <button className="btn-4">Get Started </button>
         </Link>
       </div>
     </div>

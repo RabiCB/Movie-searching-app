@@ -1,12 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './footer.css'
 
 const footer = () => {
   return (
     <div className='footer'>
-        <li><a href="#">About us</a></li>
-        <li><a href="https://www.facebook.com/pages/creation/?ref_type=launch_point">facebook</a></li>
-        <li><a href="#">Terms and Condition</a></li>
+        <Link to="/about"style={{textDecoration:'none'}}><li style={{color:'#fff'}}>About us</li></Link>
+        <li><a href="https://www.facebook.com/Movie-tonight-107704642051813">facebook</a></li>
+        <Link to="/feedback" style={{color:'white',textDecoration:'none',}}><li>feedback</li></Link>
     </div>
   )
 }

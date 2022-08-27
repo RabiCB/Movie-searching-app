@@ -28,18 +28,33 @@ body{
     align-items: center;
     margin-bottom: 30px;
 }
-.avatar{
-    color:white;
+.layout{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-end;
+    color:white;
+    padding:0 1.2rem;
+}
+.layout p{
+    padding:5px 9px;
+    border-radius: 6px;
+    color:black;
+    background-color: lightgray;
+}
+.logout{
+    padding:4px 8px;
+    background-color: rgb(219, 130, 28);
+    color:white;
+    border-radius: 6px;
+    border:none;
+
 }
 nav ul{
     display: flex;
 }
 nav ul li{
     list-style: none;
-    margin-right: 1rem;
+    margin-right: 1.2rem;
 }
 nav ul li a{
     text-decoration: none;
@@ -98,6 +113,10 @@ nav ul li a:focus::before{
     outline: none;
     border: 1px solid var(--primary-color);
 }
+.Search{
+    align-self: center;
+
+}
 .container{
     margin: auto;
     width: 80%;
@@ -118,6 +137,9 @@ nav ul li a:focus::before{
 .movie .poster{
     width: 100%;
     height: 250px;
+}
+.movie .poster:hover{
+    transform: scale(1.1);
 }
 .movie-details{
     display: flex;
@@ -196,7 +218,14 @@ nav ul li a:focus::before{
     }
     .search-btn{
         width: 200px;
-        margin-right: 100px;
+    
+    }
+    .layout p{
+        display: none;
+    }
+    .logout{
+        margin-bottom: 1.2rem;
+        
     }
 }
 .notfound{
@@ -206,15 +235,47 @@ nav ul li a:focus::before{
 
 @media screen and (max-width:500px){
     .header{
-        height:160px;
+        
         padding-left: 3rem;
-        padding-bottom:1rem ;
+        margin-bottom:1rem ;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       
     }
 
     .nav ul{
         display: flex;
         flex-direction: column;
-        gap:0.4rem
+        
+    }
+    .inputText{
+        width:10rem;
+    
+    }
+    .search-btn{
+        margin-right: 2.4rem;
+    }
+    .logout{
+        margin-left: 0.4rem;
+        
+    }
+    
+}
+@media screen and (max-width:410px){
+    .header{
+        height:rem;
+        margin-bottom: 2rem;
+    }
+    .inputText{
+        width:8rem;
+        margin-left: 3rem;
+      
+    }
+    .search-btn {
+        margin-right: 2.4rem;
+    }
+    .inputText::placeholder{
+        font-size: 0.7rem;
     }
 }

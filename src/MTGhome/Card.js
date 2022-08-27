@@ -7,7 +7,6 @@ const Card = (movie) => {
      
     <>
     <div className="movie">
-    <button className='favbtn' onclick={()=>movie.handlefavourite()}>onclick</button>
     <img src={img_path+movie.info.poster_path} alt="shows" className="poster"></img>
    
         <div className="movie-details">
