@@ -17,13 +17,13 @@ const sendEmail=(e)=>{
     form.current,
     '2BsGI2e_7dw73C6jf',
 
-    
       
   ).then(
       result=>alert("your message has been delivered sucessfully and thank you!"),
       error=>console.log("something wrong happen")
   )
   e.preventDefault();
+  
 }
 
     

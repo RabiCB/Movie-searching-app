@@ -1,4 +1,5 @@
 import "./App.css";
+import {useState, useEffect} from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Mtgshow from "./MTGhome/Mtgshow";
@@ -12,9 +13,11 @@ import Feedback from "./Components/Feedback";
 
 
 function App() {
+ 
   return (
     <BrowserRouter>
       <div className="App">
+  
         <AuthContextProvider>
         <Routes>
           <Route path="/" element={<Home />}></Route>

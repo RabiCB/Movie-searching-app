@@ -14,9 +14,14 @@
 .login-page{
     border:1px solid rgb(202, 199, 199);
     width:22rem;
-    height: 26rem;
+    height: 28rem;
     padding-top: 1rem;
 
+
+}
+.error{
+    color:red;
+    margin-bottom: 0.6rem;
 
 }
 
@@ -46,6 +51,7 @@
     margin-bottom: 1rem;
     border-width: 0.1rem;
     outline: none;
+    font-size: 16px;
     border-right-color: rgb(194, 191, 191);
     border-left-color:  rgb(194, 191, 191);
     border-bottom-color:  rgb(194, 191, 191);
@@ -56,7 +62,7 @@
    
     display: flex;
     justify-content: center;
-    margin-top: 0.7rem;
+    
     
    
 }
@@ -75,7 +81,7 @@
 .create-account{
     display: flex;
     justify-content: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
     
 }
 .btn-3{
@@ -86,6 +92,7 @@
     outline: none;
     border: none;
     border-radius: 1px ;
+
    
     
 
@@ -98,4 +105,12 @@ input:focus{
     font-size: 0.6rem;
     color:red;
     
+}
+@media screen and (max-width:410px){
+    .create-account{
+        margin-top: -2rem;
+    }
+    .btn-3{
+        margin-top: -2rem;
+    }
 }

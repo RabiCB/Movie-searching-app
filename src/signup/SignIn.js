@@ -49,7 +49,7 @@ const SignIn = () => {
             </button>
           </div>
         </form>
-        <Link to="/login">
+        <Link style={{textDecoration:'none'}} to="/login">
           <div className="create-account">
             <button className="btn-3">already have account?</button>
           </div>

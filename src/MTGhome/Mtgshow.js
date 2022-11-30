@@ -2,6 +2,7 @@ import React from 'react'
 import './mtg.css'
 import {useState} from "react";
 import { useEffect } from "react";
+import Loader from './Loader'
 import Card from "./Card";
 import {UserAuth} from '../signup/Auth'
 import { useNavigate } from 'react-router-dom';
@@ -21,6 +22,7 @@ const Mtgshow=()=>{
     const [movieData,setData]=useState([]);
     const [url_set,setUrl]=useState(url);
     const [search,setSearch]=useState();
+    const [isloading,setLoading]=useState(false);
     const navigate=useNavigate();
    const handlelogout=async()=>{
     try{
@@ -33,7 +35,9 @@ const Mtgshow=()=>{
    }
 
     useEffect(()=>{
-        fetch(url_set).then(res=>res.json()).then(data=>{
+        setLoading(true)
+         fetch(url_set).then(res=>res.json()).then(data=>{
+           setLoading(false)
             setData(data.results);
            
         });
@@ -41,10 +45,13 @@ const Mtgshow=()=>{
    
 
     const getData=(movieType)=>{
-
+       
         if(movieType==="Popular")
-        {
+       
+        {    
+            setLoading(true);
             url=base_url+"/discover/movie?sort_by=popularity.desc"+API_key;
+            setLoading(false)
         }
         if(movieType==="Theatre")
         {
@@ -64,16 +71,21 @@ const Mtgshow=()=>{
         }
         
         setUrl(url);
+       
+       
 
     }
     const searchMovie=(evt)=>{
         
         if(evt.key==="Enter")
+        
         {   
+          
             evt.preventDefault();
             url=base_url+"/search/movie?api_key=db95773a7fb212ba790d71f6adac0e7e&query="+search;
             setUrl(url);
             setSearch(" ");
+          
         }
 
     }
@@ -111,11 +123,13 @@ const Mtgshow=()=>{
                             className="inputText" onChange={(e)=>{setSearch(e.target.value)}} 
                             value={search} onKeyPress={searchMovie}>
                             </input>
-                            <button onChange={(e)=>{setSearch(e.target.value)}} onClick={searchMovie}><SearchIcon className="Search"/></button>
+                            <button onChange={(e)=>{setSearch(e.target.value)}} onClick={searchMovie}><SearchIcon onClick={searchMovie} style={{cursor:"pointer"}} className="Search"/></button>
                         </div>
                     </form>
                 </div>
+                {isloading?<Loader/>:''}
                 <div className="container">
+                   
                     {
                         (movieData.length===0)?<p className="notfound">Not Found</p>: movieData.map((res,pos)=>{
                             return(
